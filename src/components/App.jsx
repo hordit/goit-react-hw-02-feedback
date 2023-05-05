@@ -3,6 +3,7 @@ import { Section } from "./Section/Section";
 import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
 import { Statistics } from "./Statistics/Statistics";
 import { Notification } from "./Notification/Notification";
+import { Layout } from "./Layout";
 
 const INITIAL_STATE = {
   good: 0,
@@ -33,7 +34,7 @@ export class App extends Component {
     const positiveFeedback = this.countPositiveFeedbackPercentage();
 
     return (
-      <>
+      <Layout>
         <Section title="Please leave feedback">
           <FeedbackOptions options={options} onFeedback={this.handLeOnFeedback} />
         </Section>
@@ -44,7 +45,7 @@ export class App extends Component {
         ) : (
           <Notification message="There is no feedback" />
         )}
-      </>
+      </Layout>
     );
   }
 };
