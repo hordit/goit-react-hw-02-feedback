@@ -28,7 +28,7 @@ export class App extends Component {
     const totalFeedback = this.countTotalFeedback();
     return totalFeedback ? Math.round((this.state.good / totalFeedback) * 100) : 0;
   };
-  Ï
+  
   render() {
     const options = Object.keys(this.state);
     const total = this.countTotalFeedback();
