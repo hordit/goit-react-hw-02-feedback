@@ -18,7 +18,7 @@ export class App extends Component {
     this.setState({ ...INITIAL_STATE });
   }
 
-  handLeOnFeedback = (value) => {
+  onLeaveFeedback = (value) => {
     this.setState(prevState => ({ [value]: prevState[value] + 1 }));
   };
 
@@ -38,7 +38,7 @@ export class App extends Component {
       <Layout>
         <GlobalStyle />
         <Section title="Please leave feedback">
-          <FeedbackOptions options={options} onFeedback={this.handLeOnFeedback} />
+          <FeedbackOptions options={options} onFeedback={this.onLeaveFeedback} />
         </Section>
         {total > 0 ? (
           <Section title="Statistics">
