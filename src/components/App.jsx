@@ -4,6 +4,7 @@ import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
 import { Statistics } from "./Statistics/Statistics";
 import { Notification } from "./Notification/Notification";
 import { Layout } from "./Layout";
+import { GlobalStyle } from "./GlobalStyles";
 
 const INITIAL_STATE = {
   good: 0,
@@ -35,6 +36,7 @@ export class App extends Component {
 
     return (
       <Layout>
+        <GlobalStyle />
         <Section title="Please leave feedback">
           <FeedbackOptions options={options} onFeedback={this.handLeOnFeedback} />
         </Section>

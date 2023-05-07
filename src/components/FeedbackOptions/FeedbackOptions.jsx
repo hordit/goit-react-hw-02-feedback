@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
+import { Button, Div } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({options, onFeedback}) => {
     return (
-        <div>
+        <Div>
             {options.map((option) => (
-                <button key={option} onClick={() => onFeedback(option)}>
+                <Button key={option} type={option} onClick={() => onFeedback(option)}>
                     {option}
-                </button>
+                </Button>
             ))}
-        </div>
+        </Div>
     );
 };
 
