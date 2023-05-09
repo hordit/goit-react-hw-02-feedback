@@ -5,17 +5,17 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
   colors: {
-    black: "#212121",
-    white: "#ffffff",
-    backgroundHover: "#126de8",
+    black: '#212121',
+    white: '#ffffff',
+    backgroundHover: '#126de8',
   },
-  borderButton: "1px solid #dddedf",
+  borderButton: '1px solid #dddedf',
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-    <App />
+      <App />
     </ThemeProvider>
   </React.StrictMode>
 );
